@@ -1,4 +1,4 @@
-OverviewLink copied!
+OverviewLink 
 ====================
 
 Relevant source files
@@ -7,7 +7,7 @@ Relevant source files
 *   [backend/docs/diagrams/diagramas-cine.drawio](https://github.com/GRMiguelAngel/proyecto-cine/blob/8117f6f4/backend/docs/diagrams/diagramas-cine.drawio)
 *   [backend/main/settings.py](https://github.com/GRMiguelAngel/proyecto-cine/blob/8117f6f4/backend/main/settings.py)
 
-Purpose and ScopeLink copied!
+Purpose and ScopeLink 
 -----------------------------
 
 This document provides a comprehensive overview of the **proyecto-cine** system, a Django-based cinema ticket booking platform. It introduces the system's architecture, core components, and technology stack. For detailed information about specific applications, see [Movies Application](#4), [MovieTheaters Application](#5), and [Users and Tickets Applications](#6). For deployment and configuration details, see [System Architecture](#3).
@@ -16,7 +16,7 @@ This document provides a comprehensive overview of the **proyecto-cine** system,
 
 * * *
 
-System PurposeLink copied!
+System PurposeLink 
 --------------------------
 
 **proyecto-cine** is a web-based cinema management system that enables users to browse movies, view theater information, and purchase tickets for specific screenings at designated seats. The system manages the complete lifecycle of cinema operations including:
@@ -32,7 +32,7 @@ The system exposes REST API endpoints for programmatic access and provides a Dja
 
 * * *
 
-Technology StackLink copied!
+Technology StackLink 
 ----------------------------
 
 Component
@@ -81,7 +81,7 @@ WSGI/ASGI
 
 * * *
 
-Django Project StructureLink copied!
+Django Project StructureLink 
 ------------------------------------
 
 The system follows Django's standard project organization with a main configuration package and four domain-specific applications:
@@ -136,7 +136,7 @@ django.contrib.sessions
 
 db.sqlite3 (SQLite Database)
 
-### Application RegistryLink copied!
+### Application RegistryLink 
 
 The following applications are registered in `INSTALLED_APPS`:
 
@@ -174,7 +174,7 @@ Theater and seat management
 
 * * *
 
-Domain ModelLink copied!
+Domain ModelLink 
 ------------------------
 
 The system implements a relational data model centered around the ticket booking workflow. The `Ticket` entity serves as the transactional record connecting users, movies, screenings, theaters, and seats.
@@ -343,7 +343,7 @@ ForeignKey
 
 movietheater
 
-### Core EntitiesLink copied!
+### Core EntitiesLink 
 
 Entity
 
@@ -397,7 +397,7 @@ Configured
 
 * * *
 
-Request Processing ArchitectureLink copied!
+Request Processing ArchitectureLink 
 -------------------------------------------
 
 The system processes HTTP requests through Django's layered architecture, from middleware through URL routing to views, serializers, and models.
@@ -448,7 +448,7 @@ movietheaters.models MovieTheater Seat
 
 db.sqlite3
 
-### Middleware ConfigurationLink copied!
+### Middleware ConfigurationLink 
 
 The request pipeline includes the following middleware in order:
 
@@ -464,7 +464,7 @@ The request pipeline includes the following middleware in order:
 
 * * *
 
-Database ConfigurationLink copied!
+Database ConfigurationLink 
 ----------------------------------
 
 The system uses SQLite as its database backend with the following configuration:
@@ -499,7 +499,7 @@ The database file `db.sqlite3` is located in the `backend` directory at the same
 
 * * *
 
-Application Implementation StatusLink copied!
+Application Implementation StatusLink 
 ---------------------------------------------
 
 The table below shows which domain applications are fully implemented versus configured but not yet visible in the codebase:
@@ -544,7 +544,7 @@ For detailed documentation of implemented applications, see:
 
 * * *
 
-Development ConfigurationLink copied!
+Development ConfigurationLink 
 -------------------------------------
 
 The system is currently configured for development with the following settings:
@@ -577,7 +577,7 @@ Must be configured for production deployment
 
 * * *
 
-System Diagrams ReferenceLink copied!
+System Diagrams ReferenceLink 
 -------------------------------------
 
 The `backend/docs/diagrams/diagramas-cine.drawio` file contains the original conceptual entity-relationship diagrams that informed the system design. These diagrams show:
