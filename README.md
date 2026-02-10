@@ -1,13 +1,4 @@
-OverviewLink 
-====================
-
-Relevant source files
-
-*   [README.md](https://github.com/GRMiguelAngel/proyecto-cine/blob/8117f6f4/README.md)
-*   [backend/docs/diagrams/diagramas-cine.drawio](https://github.com/GRMiguelAngel/proyecto-cine/blob/8117f6f4/backend/docs/diagrams/diagramas-cine.drawio)
-*   [backend/main/settings.py](https://github.com/GRMiguelAngel/proyecto-cine/blob/8117f6f4/backend/main/settings.py)
-
-Purpose and ScopeLink 
+Purpose and Scope 
 -----------------------------
 
 This document provides a comprehensive overview of the **proyecto-cine** system, a Django-based cinema ticket booking platform. It introduces the system's architecture, core components, and technology stack. For detailed information about specific applications, see [Movies Application](#4), [MovieTheaters Application](#5), and [Users and Tickets Applications](#6). For deployment and configuration details, see [System Architecture](#3).
@@ -16,7 +7,7 @@ This document provides a comprehensive overview of the **proyecto-cine** system,
 
 * * *
 
-System PurposeLink 
+System Purpose 
 --------------------------
 
 **proyecto-cine** is a web-based cinema management system that enables users to browse movies, view theater information, and purchase tickets for specific screenings at designated seats. The system manages the complete lifecycle of cinema operations including:
@@ -32,7 +23,7 @@ The system exposes REST API endpoints for programmatic access and provides a Dja
 
 * * *
 
-Technology StackLink 
+Technology Stack 
 ----------------------------
 
 Component
@@ -81,62 +72,14 @@ WSGI/ASGI
 
 * * *
 
-Django Project StructureLink 
+Django Project Structure 
 ------------------------------------
 
 The system follows Django's standard project organization with a main configuration package and four domain-specific applications:
 
-#mermaid-rz9ihnewgv{font-family:ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica;font-size:16px;fill:#ccc;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaid-rz9ihnewgv .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaid-rz9ihnewgv .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaid-rz9ihnewgv .error-icon{fill:#a44141;}#mermaid-rz9ihnewgv .error-text{fill:#ddd;stroke:#ddd;}#mermaid-rz9ihnewgv .edge-thickness-normal{stroke-width:1px;}#mermaid-rz9ihnewgv .edge-thickness-thick{stroke-width:3.5px;}#mermaid-rz9ihnewgv .edge-pattern-solid{stroke-dasharray:0;}#mermaid-rz9ihnewgv .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-rz9ihnewgv .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-rz9ihnewgv .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-rz9ihnewgv .marker{fill:lightgrey;stroke:lightgrey;}#mermaid-rz9ihnewgv .marker.cross{stroke:lightgrey;}#mermaid-rz9ihnewgv svg{font-family:ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica;font-size:16px;}#mermaid-rz9ihnewgv p{margin:0;}#mermaid-rz9ihnewgv .label{font-family:ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica;color:#ccc;}#mermaid-rz9ihnewgv .cluster-label text{fill:#F9FFFE;}#mermaid-rz9ihnewgv .cluster-label span{color:#F9FFFE;}#mermaid-rz9ihnewgv .cluster-label span p{background-color:transparent;}#mermaid-rz9ihnewgv .label text,#mermaid-rz9ihnewgv span{fill:#ccc;color:#ccc;}#mermaid-rz9ihnewgv .node rect,#mermaid-rz9ihnewgv .node circle,#mermaid-rz9ihnewgv .node ellipse,#mermaid-rz9ihnewgv .node polygon,#mermaid-rz9ihnewgv .node path{fill:#1f2020;stroke:#ccc;stroke-width:1px;}#mermaid-rz9ihnewgv .rough-node .label text,#mermaid-rz9ihnewgv .node .label text,#mermaid-rz9ihnewgv .image-shape .label,#mermaid-rz9ihnewgv .icon-shape .label{text-anchor:middle;}#mermaid-rz9ihnewgv .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-rz9ihnewgv .rough-node .label,#mermaid-rz9ihnewgv .node .label,#mermaid-rz9ihnewgv .image-shape .label,#mermaid-rz9ihnewgv .icon-shape .label{text-align:center;}#mermaid-rz9ihnewgv .node.clickable{cursor:pointer;}#mermaid-rz9ihnewgv .root .anchor path{fill:lightgrey!important;stroke-width:0;stroke:lightgrey;}#mermaid-rz9ihnewgv .arrowheadPath{fill:lightgrey;}#mermaid-rz9ihnewgv .edgePath .path{stroke:lightgrey;stroke-width:2.0px;}#mermaid-rz9ihnewgv .flowchart-link{stroke:lightgrey;fill:none;}#mermaid-rz9ihnewgv .edgeLabel{background-color:hsl(0, 0%, 34.4117647059%);text-align:center;}#mermaid-rz9ihnewgv .edgeLabel p{background-color:hsl(0, 0%, 34.4117647059%);}#mermaid-rz9ihnewgv .edgeLabel rect{opacity:0.5;background-color:hsl(0, 0%, 34.4117647059%);fill:hsl(0, 0%, 34.4117647059%);}#mermaid-rz9ihnewgv .labelBkg{background-color:rgba(87.75, 87.75, 87.75, 0.5);}#mermaid-rz9ihnewgv .cluster rect{fill:hsl(180, 1.5873015873%, 28.3529411765%);stroke:rgba(255, 255, 255, 0.25);stroke-width:1px;}#mermaid-rz9ihnewgv .cluster text{fill:#F9FFFE;}#mermaid-rz9ihnewgv .cluster span{color:#F9FFFE;}#mermaid-rz9ihnewgv div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica;font-size:12px;background:hsl(20, 1.5873015873%, 12.3529411765%);border:1px solid rgba(255, 255, 255, 0.25);border-radius:2px;pointer-events:none;z-index:100;}#mermaid-rz9ihnewgv .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#ccc;}#mermaid-rz9ihnewgv rect.text{fill:none;stroke-width:0;}#mermaid-rz9ihnewgv .icon-shape,#mermaid-rz9ihnewgv .image-shape{background-color:hsl(0, 0%, 34.4117647059%);text-align:center;}#mermaid-rz9ihnewgv .icon-shape p,#mermaid-rz9ihnewgv .image-shape p{background-color:hsl(0, 0%, 34.4117647059%);padding:2px;}#mermaid-rz9ihnewgv .icon-shape rect,#mermaid-rz9ihnewgv .image-shape rect{opacity:0.5;background-color:hsl(0, 0%, 34.4117647059%);fill:hsl(0, 0%, 34.4117647059%);}#mermaid-rz9ihnewgv .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mermaid-rz9ihnewgv .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mermaid-rz9ihnewgv :root{--mermaid-font-family:ui-sans-serif,-apple-system,system-ui,Segoe UI,Helvetica;}
+<table><thead><tr><th>Component</th><th>Technology</th><th>Configuration Reference</th></tr></thead><tbody><tr><td><strong>Web Framework</strong></td><td>Django 5.2.8</td><td><a href="https://github.com/GRMiguelAngel/proyecto-cine/blob/8117f6f4/backend/main/settings.py#L1-L128" target="_blank" rel="noopener noreferrer" class="mb-1 mr-1 inline-flex items-stretch font-mono text-xs !no-underline transition-opacity hover:opacity-75"><span class="flex items-center break-all rounded-l px-2 py-1.5 bg-[#e5e5e5] text-[#333333] dark:bg-[#252525] dark:text-[#e4e4e4]"><svg class="mr-1.5 hidden h-3.5 w-3.5 flex-shrink-0 opacity-40 md:block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>backend/main/settings.py</span><span class="flex flex-shrink-0 items-center rounded-r border-l px-2 py-1.5 border-[#dddddd] bg-[#d8d8d8] text-[#666666] dark:border-[#333333] dark:bg-[#2a2a2a] dark:text-[#888888]">1-128</span></a></td></tr><tr><td><strong>Database</strong></td><td>SQLite</td><td><a href="https://github.com/GRMiguelAngel/proyecto-cine/blob/8117f6f4/backend/main/settings.py#L80-L85" target="_blank" rel="noopener noreferrer" class="mb-1 mr-1 inline-flex items-stretch font-mono text-xs !no-underline transition-opacity hover:opacity-75"><span class="flex items-center break-all rounded-l px-2 py-1.5 bg-[#e5e5e5] text-[#333333] dark:bg-[#252525] dark:text-[#e4e4e4]"><svg class="mr-1.5 hidden h-3.5 w-3.5 flex-shrink-0 opacity-40 md:block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>backend/main/settings.py</span><span class="flex flex-shrink-0 items-center rounded-r border-l px-2 py-1.5 border-[#dddddd] bg-[#d8d8d8] text-[#666666] dark:border-[#333333] dark:bg-[#2a2a2a] dark:text-[#888888]">80-85</span></a></td></tr><tr><td><strong>ORM</strong></td><td>Django ORM</td><td>Built into Django</td></tr><tr><td><strong>API Layer</strong></td><td>Django Views + Serializers</td><td>Application-specific</td></tr><tr><td><strong>Admin Interface</strong></td><td>Django Admin</td><td><code class="bg-input-dark/30 border-cloud/30 rounded-md border px-[0.25rem] py-px text-xs font-normal leading-[15px] before:hidden after:hidden">django.contrib.admin</code></td></tr><tr><td><strong>Application Server</strong></td><td>WSGI/ASGI</td><td><a href="https://github.com/GRMiguelAngel/proyecto-cine/blob/8117f6f4/backend/main/wsgi.py" target="_blank" rel="noopener noreferrer" class="mb-1 mr-1 inline-flex items-stretch font-mono text-xs !no-underline transition-opacity hover:opacity-75"><span class="flex items-center break-all rounded-l px-2 py-1.5 bg-[#e5e5e5] text-[#333333] dark:bg-[#252525] dark:text-[#e4e4e4] rounded-r"><svg class="mr-1.5 hidden h-3.5 w-3.5 flex-shrink-0 opacity-40 md:block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>backend/main/wsgi.py</span></a> <a href="https://github.com/GRMiguelAngel/proyecto-cine/blob/8117f6f4/backend/main/asgi.py" target="_blank" rel="noopener noreferrer" class="mb-1 mr-1 inline-flex items-stretch font-mono text-xs !no-underline transition-opacity hover:opacity-75"><span class="flex items-center break-all rounded-l px-2 py-1.5 bg-[#e5e5e5] text-[#333333] dark:bg-[#252525] dark:text-[#e4e4e4] rounded-r"><svg class="mr-1.5 hidden h-3.5 w-3.5 flex-shrink-0 opacity-40 md:block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>backend/main/asgi.py</span></a></td></tr></tbody></table>
 
-Django Core Apps
-
-Installed Applications
-
-main (Django Project)
-
-registers
-
-registers
-
-registers
-
-registers
-
-registers
-
-registers
-
-registers
-
-includes
-
-includes
-
-settings.py INSTALLED\_APPS MIDDLEWARE DATABASES
-
-urls.py ROOT\_URLCONF
-
-wsgi.py WSGI\_APPLICATION
-
-asgi.py ASGI entry point
-
-movies.apps.MoviesConfig
-
-users.apps.UsersConfig
-
-tickets.apps.TicketsConfig
-
-movietheaters.apps.MovietheatersConfig
-
-django.contrib.admin
-
-django.contrib.auth
-
-django.contrib.sessions
-
-db.sqlite3 (SQLite Database)
-
-### Application RegistryLink 
+### Application Registry 
 
 The following applications are registered in `INSTALLED_APPS`:
 
@@ -174,7 +117,7 @@ Theater and seat management
 
 * * *
 
-Domain ModelLink 
+Domain Model 
 ------------------------
 
 The system implements a relational data model centered around the ticket booking workflow. The `Ticket` entity serves as the transactional record connecting users, movies, screenings, theaters, and seats.
@@ -343,7 +286,7 @@ ForeignKey
 
 movietheater
 
-### Core EntitiesLink 
+### Core Entities 
 
 Entity
 
@@ -397,7 +340,7 @@ Configured
 
 * * *
 
-Request Processing ArchitectureLink 
+Request Processing Architecture 
 -------------------------------------------
 
 The system processes HTTP requests through Django's layered architecture, from middleware through URL routing to views, serializers, and models.
@@ -448,7 +391,7 @@ movietheaters.models MovieTheater Seat
 
 db.sqlite3
 
-### Middleware ConfigurationLink 
+### Middleware Configuration 
 
 The request pipeline includes the following middleware in order:
 
@@ -464,7 +407,7 @@ The request pipeline includes the following middleware in order:
 
 * * *
 
-Database ConfigurationLink 
+Database Configuration 
 ----------------------------------
 
 The system uses SQLite as its database backend with the following configuration:
@@ -499,7 +442,7 @@ The database file `db.sqlite3` is located in the `backend` directory at the same
 
 * * *
 
-Application Implementation StatusLink 
+Application Implementation Status 
 ---------------------------------------------
 
 The table below shows which domain applications are fully implemented versus configured but not yet visible in the codebase:
@@ -544,7 +487,7 @@ For detailed documentation of implemented applications, see:
 
 * * *
 
-Development ConfigurationLink 
+Development Configuration 
 -------------------------------------
 
 The system is currently configured for development with the following settings:
@@ -577,7 +520,7 @@ Must be configured for production deployment
 
 * * *
 
-System Diagrams ReferenceLink 
+System Diagrams Reference 
 -------------------------------------
 
 The `backend/docs/diagrams/diagramas-cine.drawio` file contains the original conceptual entity-relationship diagrams that informed the system design. These diagrams show:
